@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h2>MEU PROPRIO KANBAN</h2>
+        <button id="btn-add" data-bs-toggle="modal" data-bs-target="#exampleModal">+ Add Tarefas</button>
+    </header>
+
+    <div class="listas">
+        
+        <div class="dropzone">
+            <h3>Lista de Tarefas</h3> 
+
+            <div class="dropcard">
+
+                <div class="card" draggable="true">
+                    <h3>Baixar boletos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                
+                <div class="card" draggable="true">
+                    <h3>Baixar saldo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>  
+
+            </div> 
+
+        </div>
+
+        <div class="dropzone">
+            <h3>A Fazer</h3>
+
+            
+
+        </div>
+
+        <div class="dropzone">
+            <h3>Fazendo</h3>
+
+        </div>
+
+        <div class="dropzone">
+            <h3>Feito</h3>
+
+        </div>
+
+    </div>
+
+
+   
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Adicionar novo card</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="form-control">
+
+            <div class="form-group">
+                <label for="titulo">Titulo do card</label>
+                <input type="text" id="titulo">
+            </div>
+              
+            <div class="form-group">
+                <label for="titulo">Conteudo</label>
+                <textarea name="conteudo" id="conteudo" cols="30" rows="5"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="titulo">Data</label>
+                <input type="date" id="data">
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btnSalvar">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
